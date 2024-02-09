@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="icon" href="kalkulator.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Poppins&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #3f3f3f;
+        }
+
+        form {
+            width: 30%;
+            height: 80vh;
+            background-color: #5c5c5c;
+            margin: auto;
+            margin-top: 5%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid black;
+            padding-top: 2%;
+        }
+
+        #hasil {
+            width: 70%;
+            height: 10%;
+            margin-left: 1%;
+            margin-bottom: 6%;
+            padding-right: 3.5%;
+            padding-left: 3.5%;
+            color: white;
+            background-color: #888888;
+            text-align: end;
+        }
+
+        .ce {
+            width: 20%;
+            height: 10%;
+            margin-left: 4%;
+            margin-bottom: 6%;
+        }
+
+        input {
+            width: 20%;
+            height: 13vh;
+            margin: auto;
+            font-size: 2rem;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 2px rgba(37, 37, 37, 0.5);
+            border: none;
+            cursor: pointer;
+        }
+
+        div {
+            margin-bottom: 1%;
+            /* margin-left: 6%; */
+            padding: 1%;
+            gap: 1%;
+            display: flex;
+        }
+
+        h1 {
+            color: white;
+            font-family: oswald;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: -3%;
+            margin-top: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>KALKULATOR BINN ᵏᵉʸ</h1>
+    <form action="">
+        <input class="ce" type="button" value="ce" onclick="hasil.value = '' "
+            style="background-color: #888888; color: white;"><input id="hasil" type="text" name="hasil" disabled>
+        <div>
+            <input type="button" value="7" onclick="hasil.value += '7' ">
+            <input type="button" value="8" onclick="hasil.value += '8' ">
+            <input type="button" value="9" onclick="hasil.value += '9' ">
+            <input type="button" value="*" onclick="hasil.value += '*' ">
+        </div>
+        <div>
+            <input type="button" value="4" onclick="hasil.value += '4' ">
+            <input type="button" value="5" onclick="hasil.value += '5' ">
+            <input type="button" value="6" onclick="hasil.value += '6' ">
+            <input type="button" value="-" onclick="hasil.value += '-' ">
+        </div>
+        <div>
+            <input type="button" value="1" onclick="hasil.value += '1' ">
+            <input type="button" value="2" onclick="hasil.value += '2' ">
+            <input type="button" value="3" onclick="hasil.value += '3' ">
+            <input type="button" value="+" onclick="hasil.value += '+' ">
+        </div>
+        <div>
+            <input type="button" value="00" onclick="hasil.value += '00'">
+            <input type="button" value="0" onclick="hasil.value += '0'">
+            <input type="button" value="/" onclick="hasil.value += '/'">
+            <input type="button" value="=" style="background-color: rgb(255, 102, 0); color: white;"
+                onclick="hasil.value=eval(hasil.value)">
+        </div>
+    </form>
+</body>
+
+</html>
